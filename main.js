@@ -30,3 +30,20 @@ const team = [
     image: 'barbara-ramos-graphic-designer.jpg',
   },
 ];
+
+const teamContainer = document.querySelector(".team-container")
+  
+  teamContainer.innerHTML = " ";
+  for(let i in team){ 
+    teamContainer.innerHTML += `
+            <div class="team-card">
+              <div class="card-image">
+                <img src="img/${team[i].image}"/>
+              </div>
+              <div class="card-text">
+                <h3>${team[i].name}</h3>
+                <p>${team[i].role}</p>
+              </div>
+            </div>`
+  }
+
